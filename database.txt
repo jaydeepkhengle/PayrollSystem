@@ -1,0 +1,171 @@
+CREATE DATABASE `payrollsystem`;
+
+
+CREATE TABLE `applyleave` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `UID` varchar(30) NOT NULL DEFAULT 'Default',
+  `name` varchar(30) DEFAULT NULL,
+  `fromDate` varchar(30) DEFAULT NULL,
+  `Noofdays` varchar(30) DEFAULT NULL,
+  `reason` varchar(50) DEFAULT NULL,
+  `status` varchar(30) DEFAULT ' NOT NULL DEFAULT',
+  `leaveDays` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`ID`,`UID`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+INSERT INTO `payrollsystem`.`applyleave`
+(`ID`,
+`UID`,
+`name`,
+`fromDate`,
+`Noofdays`,
+`reason`,
+`status`,
+`leaveDays`)
+VALUES
+(<{ID: }>,
+<{UID: Default}>,
+<{name: }>,
+<{fromDate: }>,
+<{Noofdays: }>,
+<{reason: }>,
+<{status:  NOT NULL DEFAULT}>,
+<{leaveDays: }>);
+
+
+CREATE TABLE `attendence` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `UID` varchar(30) NOT NULL,
+  `name` varchar(30) DEFAULT NULL,
+  `Date` varchar(45) DEFAULT NULL,
+  `f_half` varchar(20) DEFAULT NULL,
+  `s_half` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`ID`,`UID`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+INSERT INTO `payrollsystem`.`attendence`
+(`ID`,
+`UID`,
+`name`,
+`Date`,
+`f_half`,
+`s_half`)
+VALUES
+(<{ID: }>,
+<{UID: }>,
+<{name: }>,
+<{Date: }>,
+<{f_half: }>,
+<{s_half: }>);
+
+
+CREATE TABLE `employee` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `UID` varchar(30) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `gender` varchar(30) NOT NULL,
+  `address` varchar(30) NOT NULL,
+  `state` varchar(30) NOT NULL,
+  `city` varchar(30) NOT NULL,
+  `pincode` varchar(30) NOT NULL,
+  `mobile` varchar(30) NOT NULL,
+  `Degree` varchar(30) NOT NULL,
+  `Designation` varchar(30) NOT NULL,
+  `Department` varchar(30) NOT NULL,
+  `Bank` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `Password` varchar(45) NOT NULL,
+  `Usertype` varchar(45) NOT NULL,
+  `Salary` varchar(45) NOT NULL,
+  PRIMARY KEY (`ID`,`UID`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+INSERT INTO `payrollsystem`.`employee`
+(`ID`,
+`UID`,
+`name`,
+`gender`,
+`address`,
+`state`,
+`city`,
+`pincode`,
+`mobile`,
+`Degree`,
+`Designation`,
+`Department`,
+`Bank`,
+`email`,
+`Password`,
+`Usertype`,
+`Salary`)
+VALUES
+(<{ID: }>,
+<{UID: }>,
+<{name: }>,
+<{gender: }>,
+<{address: }>,
+<{state: }>,
+<{city: }>,
+<{pincode: }>,
+<{mobile: }>,
+<{Degree: }>,
+<{Designation: }>,
+<{Department: }>,
+<{Bank: }>,
+<{email: }>,
+<{Password: }>,
+<{Usertype: }>,
+<{Salary: }>);
+
+
+CREATE TABLE `salary` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `UID` varchar(30) NOT NULL,
+  `name` varchar(30) DEFAULT NULL,
+  `Department` varchar(30) DEFAULT NULL,
+  `hr` varchar(45) DEFAULT NULL,
+  `da` varchar(45) DEFAULT NULL,
+  `med` varchar(45) DEFAULT NULL,
+  `Leave` varchar(30) DEFAULT NULL,
+  `travell` varchar(45) DEFAULT NULL,
+  `grosssalary` varchar(45) DEFAULT NULL,
+  `netsalary` varchar(45) DEFAULT NULL,
+  `Date` varchar(45) DEFAULT NULL,
+  `basicsalary` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`ID`,`UID`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+INSERT INTO `payrollsystem`.`salary`
+(`ID`,
+`UID`,
+`name`,
+`Department`,
+`hr`,
+`da`,
+`med`,
+`Leave`,
+`travell`,
+`grosssalary`,
+`netsalary`,
+`Date`,
+`basicsalary`)
+VALUES
+(<{ID: }>,
+<{UID: }>,
+<{name: }>,
+<{Department: }>,
+<{hr: }>,
+<{da: }>,
+<{med: }>,
+<{Leave: }>,
+<{travell: }>,
+<{grosssalary: }>,
+<{netsalary: }>,
+<{Date: }>,
+<{basicsalary: }>);
+
+
